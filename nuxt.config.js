@@ -10,12 +10,19 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Teamwork Marketing Front-End Assessment' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Teamwork Marketing Front-End Assessment'
+      },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap' }
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap'
+      }
     ],
     script: [
       {
@@ -27,18 +34,14 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/styles/main.scss'
-  ],
+  css: ['~/assets/styles/main.scss'],
 
   styleResources: {
     scss: ['~/assets/styles/variables.scss']
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    '~/plugins/vue-placeholders.js'
-  ],
+  plugins: ['~/plugins/vue-placeholders.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -56,7 +59,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  
+
   // Disable loading bar
   loading: false
 }

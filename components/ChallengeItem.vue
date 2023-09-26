@@ -1,6 +1,12 @@
 <template>
-  <div class="challenge-item" :class="{ active: data.isOpen }" aria-pressed="false" role="button" tabindex="0"
-    @keyup.enter="toggle" @click="toggle">
+  <div
+    class="challenge-item"
+    :class="{ active: data.isOpen }"
+    aria-pressed="false"
+    role="button"
+    tabindex="0"
+    @keyup.enter="toggle"
+    @click="toggle">
     <div class="challenge-item__header">
       <h2 :aria-labelledby="data.title" class="title">{{ data.title }}</h2>
       <div class="arrow-icon">
@@ -9,10 +15,16 @@
     </div>
     <transition name="collapse">
       <div v-if="data.isOpen">
-        <p :aria-hidden="!data.isOpen" :aria-labelledby="data.text" class="challenge-item__description">
+        <p
+          :aria-hidden="!data.isOpen"
+          :aria-labelledby="data.text"
+          class="challenge-item__description">
           {{ data.text }}
         </p>
-        <img class="challenge-item__illustration" :src="data.image" alt="A challenge illustration" />
+        <img
+          class="challenge-item__illustration"
+          :src="data.image"
+          alt="A challenge illustration" />
       </div>
     </transition>
   </div>
@@ -81,7 +93,7 @@ export default {
   .arrow-icon {
     height: 18px;
     width: 18px;
-    transition: transform .4s linear;
+    transition: transform 0.4s linear;
   }
 }
 
@@ -112,11 +124,11 @@ export default {
 }
 
 .collapse-enter-active {
-  animation: collapse reverse .4s ease;
+  animation: collapse reverse 0.4s ease;
 }
 
 .collapse-leave-active {
-  animation: collapse .4s ease;
+  animation: collapse 0.4s ease;
 }
 
 @keyframes collapse {

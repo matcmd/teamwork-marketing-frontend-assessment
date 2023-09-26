@@ -1,13 +1,18 @@
 <template>
   <div class="challenge-list" role="main">
     <transition name="fade" mode="out-in">
-      <img :key="current.image" class="challenge-list__illustration" :src="current.image"
+      <img
+        :key="current.image"
+        class="challenge-list__illustration"
+        :src="current.image"
         alt="A challenge illustration" />
     </transition>
     <div class="challenge-list__container">
       <p class="tag" :aria-labelledby="data.tag">{{ data.tag }}</p>
       <h1 class="title" :aria-labelledby="data.title">{{ data.title }}</h1>
-      <div v-for="(item, index) in data.items" :key="`challengesList-${index}-${item.id}`"
+      <div
+        v-for="(item, index) in data.items"
+        :key="`challengesList-${index}-${item.id}`"
         class="challenge-item__wrapper">
         <LazyChallengeItem :data="item" @toggle="(id) => $emit('toggle', id)" />
       </div>
@@ -97,11 +102,11 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
 }
 
 .fade-enter,
 .fade-leave-to {
-  opacity: 0
+  opacity: 0;
 }
 </style>

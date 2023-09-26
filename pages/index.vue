@@ -1,14 +1,12 @@
 <template>
   <div class="page-wrapper">
-    <template v-if="$fetchState.pending">
-      <p>Loading...</p>
-    </template>
-    <template v-else-if="$fetchState.error">
-      <p>{{ $fetchState.error.message }}</p>
-    </template>
-    <template v-else>
-      <ChallengeList :data="challenges" />
-    </template>
+    <LazyLoadingSpinner
+      v-if="$fetchState.pending"
+      text="Loading challenges, do not refresh" />
+    <LazyErrorMessage
+      v-else-if="$fetchState.error"
+      :text="$fetchState.error.message" />
+    <LazyChallengeList v-else :data="challenges" @toggle="showChallenge" />
   </div>
 </template>
 
@@ -43,4 +41,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.page-wrapper {
+  display: flex;
+  margin: 40px 30px;
+  width: 100%;
+}
+</style>

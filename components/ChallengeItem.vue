@@ -7,8 +7,8 @@
         <ArrowIcon alt="An arrow icon" />
       </div>
     </div>
-    <transition name="expand" mode="out-in">
-      <div v-if="data.isOpen" :key="data.isOpen">
+    <transition name="collapse">
+      <div v-if="data.isOpen">
         <p :aria-hidden="!data.isOpen" :aria-labelledby="data.text" class="challenge-item__description">
           {{ data.text }}
         </p>
@@ -111,13 +111,23 @@ export default {
   }
 }
 
-.expand-enter-active,
-.expand-leave-active {
-  transition: opacity .4s ease;
+.collapse-enter-active {
+  animation: collapse reverse .4s ease;
 }
 
-.expand-enter-from,
-.expand-leave-to {
-  opacity: 0;
+.collapse-leave-active {
+  animation: collapse .4s ease;
+}
+
+@keyframes collapse {
+  from {
+    opacity: 1;
+    max-height: 500px;
+  }
+
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
 }
 </style>

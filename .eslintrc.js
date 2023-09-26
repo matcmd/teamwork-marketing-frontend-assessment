@@ -9,8 +9,13 @@ module.exports = {
     parser: '@babel/eslint-parser',
     requireConfigFile: false
   },
-  extends: ['@nuxtjs', 'plugin:nuxt/recommended', 'prettier'],
-  plugins: ['jest'],
+  extends: [
+    '@nuxtjs',
+    'plugin:nuxt/recommended',
+    'prettier',
+    'plugin:vuejs-accessibility/recommended'
+  ],
+  plugins: ['jest', 'vuejs-accessibility'],
   // add your custom rules here
   rules: {}
 }

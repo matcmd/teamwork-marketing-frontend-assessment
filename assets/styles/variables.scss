@@ -3,24 +3,26 @@ $font-family: 'Work Sans', sans-serif;
 $font-weight: 400;
 $font-weight--medium: 500;
 $font-weight--bold: 600;
-$font-size--16: 16px;
 $font-size--14: 14px;
+$font-size--15: 15px;
+$font-size--16: 16px;
+$font-size--18: 18px;
+$font-size--21: 21px;
+$font-size--28: 28px;
 $font-size--40: 40px;
-$font-size--21: 40px;
 
 // Colors
 $color--white: #ffffff;
 $color--black: #1d1c39;
 $color--black-alt: #0b0e1f;
-$color--pink: #ff22b1;
+$color--pink: #d91c97;
 $color--blue: #4461d7;
 $color--gray-dark: #494e6a;
 $color--gray-light: #eaeef4;
 $color--arrow: #494e6a;
 
 // Screen Sizes
-$screen-xs: 564px;
-$screen-sm: 768px;
-$screen-md: 992px;
-$screen-lg: 1024px;
+$screen-sm: 564px;
+$screen-md: 768px;
+$screen-lg: 992px;
 $screen-xl: 1200px;
